@@ -1,0 +1,2 @@
+# hm_analyze_unique_encode
+秀丸エディタ が内部的に利用している独自エンコードの仕様一端
