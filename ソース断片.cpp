@@ -1,3 +1,7 @@
+// 秀丸スターユニコードからの復元 DecodeOriginalEncodeVector はおそらくこれで正しい
+// EncodeWStringToOriginalEncodeVector2 の方はこれでは完全な再現ができない。
+// おそらく 斎藤まるお 氏はなにか１つ言っていないことがある。
+
 
 #include <windows.h>
 #include <string>
