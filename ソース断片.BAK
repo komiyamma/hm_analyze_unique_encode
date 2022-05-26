@@ -25,12 +25,25 @@ static int nZenkaku(wchar_t wch) {
 
 static vector<BYTE> ToOriginalHmStarUnicode(wchar_t wch) {
 
+	DWORD star_uni;
+	char *p = &star_uni;
+
+	*p = pszDest = '\x1A';
+	WRITEWORD( (WORD*)(pszDest + 1), wUni | 0x8080 );
+	UINT u = nZenkaku(wch);
+	p[3] = ((wch & 0x80) >> 7) + ((wch & 0x8000) >> 14) + 4 + u;
+	/*
 	vector<BYTE> ret;
 	ret.push_back(0x1A);
 	ret.push_back(0x80 + LOBYTE(wch));
 	ret.push_back(0x80 + HIBYTE(wch));
-	BYTE byte4ix = ((wch & 0x80) >> 7) + ((wch & 0x8000) >> 14) + 4 + nZenkaku(wch);
+	BYTE byte4ix = ((wch & 0x80) >> 7) + ((wch & 0x8000) >> 14) + 4 + u;
 	ret.push_back(byte4ix);
+	*/
+	vector<BYTE> ret;
+	for(int i=0; i<4; i++) {
+		ret.push_back((BYTE)p[i]);
+	}
 
 	return ret;
 }
