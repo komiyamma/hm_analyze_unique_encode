@@ -6,14 +6,14 @@ https://github.com/komiyamma/hm_outputpane_make_unique_encode_mapfile
 ## 秀丸スターユニコード ⇒ wstring
 
 この「G:\repogitory\hm_analyze_unique_encode\秀丸独自スターユニコードからwstringへ」のフォルダのやり方で十分だと思われる。
-(このエンコード直接扱う際にそんな大長文といったことは考えられないため)
+(このデコードを扱う必要があるシーンというのは非常に限られており、直接扱う際にそんな大長文といったことは考えられないため)
 
 ## wstring ⇒ 秀丸スターユニコード
 
 「wstringから秀丸独自スターユニコードへ」がやり方なのであるが、これでは非常に遅くなってしまう。
-(対象は改善できるだろうが、根本的にwstringになってしまっている時点で改善が難しい)
+(多少は改善できるだろうが、根本的にwstringになってしまっている時点で改善が難しい)
 
-hmPython3やhm.NETやHm.CppInvokeのように直接変換マップを持ってしまったほうが良い。
+hmPython3やhm.NETやHm.CppInvokeのように直接wstring⇒秀丸スターユニコードも含めた変換マップを0x0000～0xFFFF持ってしまったほうが良い。
 (50倍以上速いのではなかろうか...)
 
 
