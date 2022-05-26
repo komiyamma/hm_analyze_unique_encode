@@ -17,7 +17,7 @@ https://github.com/komiyamma/hm_outputpane_make_unique_encode_mapfile
 hmPython3やhm.NETやHm.CppInvokeのように直接wstring⇒秀丸スターユニコードも含めた変換マップを0x0000～0xFFFF持ってしまったほうが良い。
 (50倍以上速いのではなかろうか...)
 
-0x0000～0xFFFFの変換ではあるが、ちゃんと合成や異形なども問題なく含め変換・再現される。
+0x0000～0xFFFFの変換ではあるが、ちゃんとサロゲート系も含め変換・再現される。
 
 ```
 　一応簡単に内部のデータ構造を説明させていただきますと・・・
