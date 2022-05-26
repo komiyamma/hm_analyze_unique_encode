@@ -3,6 +3,9 @@
 https://github.com/komiyamma/hm_outputpane_make_unique_encode_mapfile
 とも関係あり。
 
+情報が明確に提供されたのは下記のスレッド以下
+https://www.maruo.co.jp/hidesoft/2/x39771_.html#39772
+
 ## 秀丸スターユニコード ⇒ wstring
 
 この「G:\repogitory\hm_analyze_unique_encode\秀丸独自スターユニコードからwstringへ」のフォルダのやり方で十分だと思われる。  
