@@ -1,5 +1,21 @@
-# hm_analyze_unique_encode
-秀丸エディタ が内部的に利用している独自エンコードの仕様一端
+# 秀丸独自スターユニコード関係
+
+https://github.com/komiyamma/hm_outputpane_make_unique_encode_mapfile
+とも関係あり。
+
+## 秀丸スターユニコード ⇒ wstring
+
+この「G:\repogitory\hm_analyze_unique_encode\秀丸独自スターユニコードからwstringへ」のフォルダのやり方で十分だと思われる。
+(このエンコード直接扱う際にそんな大長文といったことは考えられないため)
+
+## wstring ⇒ 秀丸スターユニコード
+
+「wstringから秀丸独自スターユニコードへ」がやり方なのであるが、これでは非常に遅くなってしまう。
+(対象は改善できるだろうが、根本的にwstringになってしまっている時点で改善が難しい)
+
+hmPython3やhm.NETやHm.CppInvokeのように直接変換マップを持ってしまったほうが良い。
+(50倍以上速いのではなかろうか...)
+
 
 ```
 　一応簡単に内部のデータ構造を説明させていただきますと・・・
