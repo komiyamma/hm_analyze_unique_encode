@@ -1,5 +1,7 @@
 # 秀丸独自スタートユニコード関係
 
+[![CC0](https://img.shields.io/badge/license-CC0-blue.svg?style=flat)](LICENSE)
+
 - https://github.com/komiyamma/hm_outputpane_make_unique_encode_mapfile  
 とも関係あり。
 
