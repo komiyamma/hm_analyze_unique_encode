@@ -47,7 +47,7 @@ std::wstring DecodeOriginalEncodeVector(BYTE *original_encode_string) {
 		for (int i = 0; i < (int)strlen(pstr); i++) {
 			if (i <= lastcheckindex) {
 				DWORD* pStarUni = (DWORD*)(&pstr[i]);
-				if (IsSTARTUNI_inline(*pStarUni)) {
+				if (pstr[i] == '\x1A' && IsSTARTUNI_inline(*pStarUni)) {
 					if (tmp_buffer.length() > 0) {
 						result += cp932_to_utf16(tmp_buffer);
 						tmp_buffer.clear();
